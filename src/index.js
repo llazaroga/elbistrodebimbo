@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $(".images-index a").on('click', function(event) {
+    $(".logo-hueso a, .carta a").on('click', function(event) {
   
       
       if (this.hash !== "") {

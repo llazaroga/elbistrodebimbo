@@ -3,12 +3,16 @@
     <head>
         <title>Nuestros platos</title>
         <meta charset= "utf-8">
+        <meta name="description" content="Nuestros platos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
         <link rel= "stylesheet" href="estilosweb.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
         <link  rel="icon"   href="imgweb/faviconB.png" type="image/png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+        <script src="index.js"></script>
 
     </head>
 
@@ -17,20 +21,40 @@
 
         <header class="header">
 
-            <div class="banner">
-                <img class="logo-index" src="imgweb/banner.PNG" alt="Logo bistró de Bimbo"> 
+            <div class="container">
+                <div class="banner-pequeño">
+                    <a href="index.html"> <img src="imgweb/banner2.PNG" alt="Banner el bistró de bimbo"> </a>
+                </div>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="presentacion.html">Nuestra historia</a> </li>
+                    <li id= "seleccionado"><a href="categoria.html">Nuestros platos</a></li>
+                    <li><a href="enlaces.html">Enlaces</a></li>
+                </ul>
+            </nav>
             </div>
 
         </header>
         <main>
             <div class = "cuadricula">
-
+             <div class="box">   
             <h1> Nuestra carta </h1>
+            </div>
+
+            <nav class="carta">
+                <ul>
+                    <li><a href="#entrantes">Entrantes</a> </li>
+                    <li><a href="#platos-principales">Platos principales</a></li>
+                    <li><a href="#postres">Postres</a></li>
+                </ul>
+            </nav>
 
 
                 
 
-                    <h2 class="subtitulo"> Entrantes</h2>
+                    <h2 id="entrantes" class="subtitulo"> Entrantes</h2>
 
                 
 
@@ -80,7 +104,7 @@
 
                
 
-                    <h2 class="subtitulo"> Platos principales</h2>
+                    <h2 id="platos-principales" class="subtitulo"> Platos principales</h2>
 
                 
 
@@ -91,31 +115,38 @@
                     <h3>Croquetas de pienso bañadas en crema de verduras</h3>
                     <p>Croquetas del pienso más selecto mezclado con crema de puerros, calabaza y patata, al punto de sal</p>
 
-                    <a href="detalle_pienso_con_verduras.html"><img src="imgweb/verreceta1.PNG" alt="Boton ver receta"
-                        onmouseover="this.src='imgweb/verreceta2.PNG'"
-                        onmouseout="this.src='imgweb/verreceta1.PNG'"
-                        /></a>
-
+                    <div class="boton-receta">
+                        <div class="boton-container">
+                            <a href="detalle_pienso_con_verduras.html">
+                                <img class="boton1" src="imgweb/verreceta1.PNG" alt="Boton ver receta">
+                                <img class="boton2" src="imgweb/verreceta2.PNG" alt="Boton ver receta hover">
+                            </a>
+                        </div>
                     </div>
+
+                </div>
                 
 
                 <div class="grid-item2">
-
                         
                         <img src="imgweb/piensoconcrema.PNG" alt="Imagen pienso con crema de verduras">
                     
                 </div>
                     
 
-                <div class="grid-item3-right">  
+                <div class="grid-item3-right">
 
                     <h3>Salchichas bañadas en salsa de kéfir</h3>
                     <p>Deliciosas salchichas a la plancha, hechas a fuego lento bañadas en una deliciosa salsa de kéfir eco</p>
 
-                    <a href="detalle_salchichas_con_kefir.html"><img src="imgweb/verreceta1.PNG" alt="Boton ver receta"
-                    onmouseover="this.src='imgweb/verreceta2.PNG'"
-                    onmouseout="this.src='imgweb/verreceta1.PNG'"
-                    /></a>
+                    <div class="boton-receta">
+                        <div class="boton-container">
+                            <a href="detalle_salchichas_con_kefir.html">
+                                <img class="boton1" src="imgweb/verreceta1.PNG" alt="Boton ver receta">
+                                <img class="boton2" src="imgweb/verreceta2.PNG" alt="Boton ver receta hover">
+                            </a>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -161,7 +192,7 @@
                 
                  
 
-                    <h2 class="subtitulo"> Postres</h2>
+                    <h2 id="postres" class="subtitulo"> Postres</h2>
 
 
                   
@@ -208,8 +239,18 @@
 
                 </div>
                    
-
+            
             </div>
+        </div>
+        <div class="boton-top">
+            <div class="boton-container">
+
+            <a href="categoria.html">
+                <img class="boton1" src="imgweb/botontop1.PNG" alt="Boton subir página">
+                <img class="boton2" src="imgweb/botontop2.PNG" alt="Boton subir página hover">
+            </a>
+            </div>
+
         </div>
 
         </main>  

@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 $(document).ready(function () {
-  $(".images-index a").on('click', function (event) {
+  $(".logo-hueso a, .carta a").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
@@ -159,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54488" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56917" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

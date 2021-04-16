@@ -1,52 +1,130 @@
+
 body{
-background-color: #88bbba;
-margin: 0;
+    background-color: #88bbba;
+    margin: 0;
+    }
+
+.container{
+    width:100%;
+    height: 30vh;
+    background-color:#78adad;
+    margin-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
+
+.banner-pequeño {
+    display: flex;
+    align-items: center;
+}
+    .banner-pequeño img{
+        width: 45vw;
+    }
+
+.navigation{
+    display: flex;
+    align-items: center;
+    float: right;
+    justify-self: right;
+}
+
+    .navigation ul {
+        padding-right: 3vw;
+        padding-left: 0;
+        list-style-type: none;
+        text-align: right;
+    }
+
+    .navigation li {
+        display: inline-block;
+    }
+
+        .navigation li a {
+            display: block;
+            color: #201d1e;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Pacifico', sans-serif;
+            font-size: calc(0.5em + 1.5vw);
+        }
+
+            .navigation li a:hover {
+                color: #8b5482; 
+                
+            }
+
+            .navigation li a::after {
+                content: "·";
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+
+        .navigation li:last-child a::after {
+            content: none;
+        }
+
+        #seleccionado a{
+            color: #8b5482;
+        }
+        
+    
+
 
 h1{
     font-family: 'Pacifico', sans-serif;
     color: #eff3f1; 
-    font-size: 3.5em; 
-    text-align: center;
-    margin-bottom: 1.5em;
+    font-size: calc(1.5em + 2vw); 
+    text-align: left;
     }
 
 h2{
-font-family: 'Zilla Slab Highlight', sans-serif;
-color: #000000;
-font-size: 2.5em;
+    font-family: 'Zilla Slab Highlight', sans-serif;
+    color: #000000;
+    font-size: 2.5em;
+    margin-top: 8vh;
 }
 
-.special{
-font-family: 'Pacifico', sans-serif;
-color: #000000; 
-font-size: 3em; 
-text-align: center;
+.titulo-detalle{
+    font-family: 'Pacifico', sans-serif;
+    color: #000000; 
+    font-size: 3em; 
+    text-align: center;
+    margin: 0 20vw;
 }
 
 h3{
     font-family: 'Pacifico', sans-serif;
     color: #000000; 
-    font-size: 2em; 
+    font-size: 2.3em; 
+    margin-top:0;
     
     }
 
 h4{
     font-family: 'Zilla Slab Highlight', sans-serif;
     color: #000000;
-    font-size: 1.5em;
+    font-size: calc(1em + 1.2vw);
+    padding-top: 5vh;
     
     
     }
 
 p{
 font-family: 'Courier New', Courier, monospace;
-font-size: 1.3em;
+font-size: calc(1em + 0.4vw);
 }
 
 ul li{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.3em;
+    font-size: calc(1em + 0.4vw);
+}
+.tiempos{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.tiempos li{
+    list-style: none;
+    font-size: calc(1em + 0.4vw);
 }
 
 body::-webkit-scrollbar {
@@ -61,6 +139,9 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid #c0ecec;
 }
 
+
+
+
 .grid-container-left img{
 width:100%;
 max-width: 500px;
@@ -69,39 +150,45 @@ max-width: 500px;
 .grid-container-right img{
     width:100%;
     max-width: 500px;
-
-
 }
 
 
 .grid-container-left{
     display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 2.5fr;
     text-align: justify;
-
 }
 
 .grid-container-right{
     display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 2.5fr 1fr;
     text-align: justify;
-
 }
 
 .cuadricula{
     padding: 0 10%;
 }
 
+#ilustraciones img{
+  margin-top: 2vh ;
+}
+
+.grid-item2{
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
 .grid-item3-right{
- padding-right: 15%;
- padding-top: 10%;
- text-align: right;
+    padding-right: 15%;
+    text-align: right;
+    align-self: center;
+    padding-bottom: 5%;
 }
 
 .grid-item3-left{
     padding-left: 15%;
-    padding-top: 10%;
     text-align: left;
+    align-self: center;
    }
 
 
@@ -115,14 +202,11 @@ max-width: 500px;
 }
 
 
-
 .logo-bienvenidos{
     position: absolute;
     top: 30vh;
     left: 35vw;
     width: 30vw;
-    
-    
 }
 
 .logo-bimbo-left{
@@ -139,21 +223,15 @@ max-width: 500px;
     max-width: 25vw;
 }
 
-#boton{
+.logo-hueso {
     position: absolute;
-    width: 16vw;
-    background: url('imgweb/boton1.PNG');
     top: 76vh;
     left: 42vw;
-    background-size: contain;
 }
 
-#boton:hover{
-    background: url('imgweb/boton2.PNG');
-    background-size: contain;
-
+.logo-hueso img {
+    width: 16vw;  
 }
-
 
 
 .intro{
@@ -166,12 +244,12 @@ max-width: 500px;
 }
 
 .intro p{
-text-align:center;
-font-family: 'Courier New', Courier, monospace;
-font-size: 1.3em;
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
 }
 
-.footer-index {
+.footer-index-special{
     position: relative;
     padding-left: 5%;
     top: 100vh;
@@ -179,77 +257,248 @@ font-size: 1.3em;
     height: 10vh;
 }
 
-.nav-images-grid {
+.footer-index{
     position: relative;
+    top: 30vh;
+    width: 100%;
+    height: 15vh;
+    background-color: #78adad;
+    display: flex;
+    align-items: center;
+}
+
+.footer-index p{
+    padding-left: 5vh;
+}
+
+.nav-images-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: 10vh;
+}
 
+
+
+.boton-receta{
+    justify-self: right;
+    width: 80%;
+    height: 5vh;
+}
+    .boton-receta img{
+        width: 10vw;
+    }
+
+
+.boton-container{
+    position:relative;
+    height: fit-content;
+    height: 5vh;
+}
+
+.boton-top{
+    height: 5vh;
+    margin-left: 42.5vw; 
+}
+
+.boton-top img{
+    width: 15vw;
 }
 
 .nav-images-grid img{
-    left: 50%;
-    padding:  8vh 6.5vw;
     width: 20vw;
-    
-} 
+    padding: 8vh 6.5vw;
+}
+
+.boton-container .boton1 {
+    position:absolute;
+    display: inline;
+}
+.boton-container .boton2 {
+    position:absolute;
+    display: none;
+}
+.boton-container:hover .boton1 {
+    position:absolute;
+    display: none;
+}
+.boton-container:hover .boton2 {
+    position:absolute;
+    display: inline;
+}
+
 
 .bimbocomida{
-
-width:20vw;
-border: #d77a8f 3vw solid;
-background-color: #d77a8f;
-margin-right: 5vw;
-margin-top: 4vh;
-margin-bottom: 3vh;
-border-radius:15vw;
-float: left;
-
-
+    width:20vw;
+    border: #d77a8f 3vw solid;
+    background-color: #d77a8f;
+    margin-right: 5vw;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    border-radius:15vw;
+    float: left;
 }
 
 
 section{
-    padding: 0 20vh;
+    padding: 5vh 10vw;
     text-align: justify;
     line-height: 5vh;
 }
 
-.grid-item3-right img{
-width: 10vw;
-
-}
-.receta-kefir{
-    width: 85vh;
+.receta-foto{
+    width: 45vw;
     float: right;
-    margin: 5vh;
+    margin-left: 5vw;
 }
 
-.receta-crema{
-
-    width: 85vh;
-    float: right;
-    margin: 5vh;
-
-}
 .bimbotasfaim{
     width:20vw;
-    border: #d77a8f 40px solid;
-    margin: 30px;
-    border-radius: 200px;
+    border: #d77a8f 3vw solid;
+    border-radius: 15vw;
     float: right;
-
+    margin-left: 6vw;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    border-radius:15vw;
+    background-color: #d77a8f;
+}
+.nav-recetas{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.boton-anterior {
+    width: 18vw;
 }
 
-.boton-anterior img{
-    width:15vh;
-    float: left;
-    padding: 4vh;
-
+.boton-siguiente {
+    width: 18vw;
 }
 
-.boton-siguiente img{
-    width:15vh;
-    float: right;
-    padding: 4vh;
+.boton-anterior img {
+    width: 10vw;
+    padding: 0 4vw;
+}
 
+.boton-siguiente img {
+    width: 10vw;
+    padding: 0 4vw;
+}
+
+
+
+    .carta ul {
+        text-align: right;
+        list-style-type: none;
+    }
+    
+    .carta li {
+        display: inline-block;
+        
+    }
+    
+    .carta li a {
+            text-decoration: none;
+            font-family: 'Pacifico', sans-serif;
+            font-size: calc(0.5em + 1vw);
+            color: #000000;
+            
+        }
+    
+        .carta li a:hover {
+                color: #777777; 
+                
+            }
+    
+            .carta li a::after {
+                content: " ";
+                padding-left: 2vw;
+                padding-right: 2vw;
+            }
+    
+            .carta li:last-child a::after {
+            content: none;
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
+
+        .box{
+
+            border-bottom: 1vh solid #eff3f1;
+        }
+        
+        .enfasis{
+            font-size: calc(1.8em + 0.8vw);
+        }
+    
+
+@media screen and (max-width: 500px){
+    .logo-bienvenidos{
+        position: absolute;
+        top: 40vh;
+        left: 20vw;
+        width: 60vw;
+    }
+    .logo-bimbo-left, .logo-bimbo-right{
+        padding-top: 5vh;
+    }
+    .logo-hueso {
+        position: absolute;
+        top: 76vh;
+        left: 30vw;
+        }
+        .logo-hueso img {
+            width: 40vw;
+        }
+}
+
+@media screen and (max-width: 600px){
+    .grid-container-left{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-container-right{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item3-left, .grid-item3-right{
+        text-align: center;
+        padding: 0;
+    }
+
+    .boton-receta{
+        width: 60%;
+    }
+        .boton-receta img {
+            width: 30vw;
+        }
+    .container{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-pequeño img{
+        width: 80vw;
+    }
+    .carta li {
+        display: flex;
+    }
+
+    .boton-top{
+        margin-left: 35vw; 
+        margin-top: 10vh;
+    }
+
+    .boton-top img{
+        width: 30vw;
+    }
 }
