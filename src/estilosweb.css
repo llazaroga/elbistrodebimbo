@@ -8,9 +8,8 @@ body{
     width:100%;
     height: 30vh;
     background-color:#78adad;
-    margin-bottom: 5vh;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 4fr;
 }
 
 .banner-pequeño {
@@ -20,6 +19,15 @@ body{
     .banner-pequeño img{
         width: 45vw;
     }
+.logo_nuevo {
+    display: flex;
+    align-items: center;
+    }
+    .logo_nuevo img{
+        width: 8vw;
+        padding-left: 1.5vw;
+    }
+    
 
 .navigation{
     display: flex;
@@ -67,7 +75,54 @@ body{
             color: #8b5482;
         }
         
-    
+        .navigation{
+            display: flex;
+            align-items: center;
+            float: right;
+            justify-self: right;
+        }
+        
+            .navigation-footer ul {
+                padding-right: 2vw;
+                padding-left: 0;
+                list-style-type: none;
+                text-align: right;
+            }
+        
+            .navigation-footer li {
+                display: inline-block;
+                
+            }
+        
+                .navigation-footer li a {
+                    display: block;
+                    color: #201d1e;
+                    text-align: center;
+                    text-decoration: none;
+                    font-family:  'Courier New', Courier, monospace;
+                    font-weight: bold;
+                    font-size: calc(0.6em + 1vw);
+                }
+        
+                    .navigation-footer li a:hover {
+                        color: #8b5482; 
+                        
+                    }
+        
+                    .navigation-footer li a::after {
+                        content: "·";
+                        padding-left: 1vw;
+                        padding-right: 1vw;
+                    }
+        
+                .navigation-footer li:last-child a::after {
+                    content: none;
+                }
+        
+                #seleccionado a{
+                    color: #26676a;
+                }   
+
 
 
 h1{
@@ -105,7 +160,6 @@ h4{
     color: #000000;
     font-size: calc(1em + 1.2vw);
     padding-top: 5vh;
-    
     
     }
 
@@ -200,6 +254,9 @@ max-width: 500px;
 .logo-index{
     width: 100%;
 }
+.banner_sub img{
+    width:100%;
+}
 
 
 .logo-bienvenidos{
@@ -232,14 +289,55 @@ max-width: 500px;
 .logo-hueso img {
     width: 16vw;  
 }
+.clips{
+    width:100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    height: 10vh;
+    margin-top: 60vh;
+    max-height: 10vh;
+    border-bottom: 80vh;
 
+}
+
+.clip1 img{
+    max-width: 30vw;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 5vw;
+
+    
+}
+
+.logo_clips img{
+    width:15vw;
+    display: flex;
+    align-content: center;
+    margin: auto;
+
+}
+
+.clip2 img{
+    max-width: 30vw;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-left: 5vw;
+
+}
+
+
+    
 
 .intro{
     background-color: #eff3f1;
     position:absolute;
     width: 100%;
     top:100vh;
-    height: 80vh;
+    height: 120vh;
     padding: 10vh 0;
 }
 
@@ -254,14 +352,21 @@ max-width: 500px;
     padding-left: 5%;
     top: 100vh;
     width: 95%;
-    height: 10vh;
+    height: 40vh;
+    margin-top: 30vh;
+}
+.footer-index-special p{
+    padding-left: 4vw;
+    padding-right: 7vw;
+    padding-top: 25vh;
+    
 }
 
 .footer-index{
     position: relative;
     top: 30vh;
     width: 100%;
-    height: 15vh;
+    height: 23vh;
     background-color: #78adad;
     display: flex;
     align-items: center;
@@ -269,6 +374,13 @@ max-width: 500px;
 
 .footer-index p{
     padding-left: 5vh;
+    padding-right: 7vw;
+    
+}
+
+.footer-index img{
+    width: 8vw;
+    padding-left: 1.5vw;
 }
 
 .nav-images-grid {
@@ -384,6 +496,22 @@ section{
     width: 10vw;
     padding: 0 4vw;
 }
+.imagen1{
+    width: 30vw;
+    float: right;
+    margin-left: 5vw;
+    margin-bottom: 3vw;
+}
+.imagen2{
+    width: 50vw;
+    float: left;
+    margin-right: 5vw;
+}
+.imagen3{
+    width: 25vw;
+    float: right;
+    margin-top: 5vw;
+}
 
 
 
@@ -429,7 +557,123 @@ section{
         
         .enfasis{
             font-size: calc(1.8em + 0.8vw);
+            line-height: 10vh;
         }
+
+    #logotipo_animado{
+        animation-name: animacionindex;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+    }
+    @keyframes animacionindex {
+        
+        0% { transform: rotate(0deg); }
+        100%{ transform: rotate(360deg); }
+      }
+    .animacion_patitas img{
+        align-items: center;
+    }
+      
+      
+      #patita_izq1{
+          width: 4vw;
+          margin-left: 40vw;
+          animation-name: patitaizq1;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+
+      }
+      @keyframes patitaizq1 {
+        
+        0% { opacity: 100%; }
+        80% {opacity: 0}
+        100% {opacity: 0;}
+        
+      }
+      #patita_izq2{
+        width: 4vw;
+        margin-left: 40vw;
+        animation-name: patitaizq2;
+        animation-duration: 4s;
+        animation-iteration-count:infinite ;
+        animation-direction: alternate;
+        
+      }
+
+      @keyframes patitaizq2 {
+        
+        0% { opacity: 100%; }
+        51% {opacity: 0}
+        100% {opacity: 0;}
+      }
+      #patita_izq3{
+        width: 4vw;
+        margin-left: 40vw;
+        animation-name: patitaizq3;
+        animation-duration: 4s;
+        animation-iteration-count:infinite ;
+        animation-direction: alternate;
+
+      }
+      @keyframes patitaizq3 {
+        
+        0% { opacity: 100%; }
+        17% {opacity: 0}
+        100% {opacity: 0;}
+      }
+
+      #patita_der1{
+        width: 4vw;
+        margin-bottom: 3vh;
+        margin-left: 2vw;
+        animation-name: patitader1;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes patitader1 {
+        
+        0% { opacity: 100%; }
+        85% {opacity: 0}
+        100% {opacity: 0;}
+      }
+
+      #patita_der2{
+            width: 4vw;
+            margin-bottom: 3vh;
+            margin-left: 2vw;
+            animation-name: patitader2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+      @keyframes patitader2 {
+        
+        0% { opacity: 100%; }
+        68% {opacity: 0}
+        100% {opacity: 0;}
+      }
+
+     #patita_der3{
+                width: 4vw;
+                margin-bottom: 3vh;
+                margin-left: 2vw;
+                animation-name: patitader3;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+
+    }
+    @keyframes patitader3 {
+        
+        0% { opacity: 100%; }
+        34% {opacity: 0}
+        100% {opacity: 0;}
+      }
     
 
 @media screen and (max-width: 500px){
@@ -493,6 +737,18 @@ section{
         display: flex;
     }
 
+    .footer-index{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-index ul{
+        border: 0;
+        padding:0;
+        margin:0;
+    }
+
     .boton-top{
         margin-left: 35vw; 
         margin-top: 10vh;
@@ -500,5 +756,13 @@ section{
 
     .boton-top img{
         width: 30vw;
+    }
+    .logo_nuevo img{
+        width: 15vw;
+        padding-top: 2.5vh;
+    }
+    .footer-index img{
+        width: 15vw;
+        padding-top: 2.5vh;
     }
 }

@@ -1,22 +1,22 @@
 $(document).ready(function(){
     
-    $(".logo-hueso a, .carta a").on('click', function(event) {
-  
+  $(".logo-hueso a, .carta a, .logo_clips a").on('click', function(event) {
+
+    
+    if (this.hash !== "") {
       
-      if (this.hash !== "") {
+      event.preventDefault();
+
+    
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
         
-        event.preventDefault();
-  
-      
-        var hash = this.hash;
-  
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 1000, function(){
-     
-          
-          window.location.hash = hash;
-        });
-      } 
-    });
+        window.location.hash = hash;
+      });
+    } 
   });
+});
